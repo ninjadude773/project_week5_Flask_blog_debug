@@ -17,12 +17,12 @@ app = Flask(__name__)
 app.config.from_object(Config)
 
 db = SQLAlchemy(app)
-migrate = Migrate(app, db)
+migrate = Migrate(app,db)
 
 mail = Mail(app)
 
 # Login Config
-login = LoginManager(pp)
+login = LoginManager(app)
 login.login_view = 'login' # Specify what page to load for NON-authenticated Users
 
 
